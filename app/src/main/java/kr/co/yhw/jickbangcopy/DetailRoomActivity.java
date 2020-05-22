@@ -1,6 +1,9 @@
 package kr.co.yhw.jickbangcopy;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 
@@ -24,6 +27,24 @@ public class DetailRoomActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+// 전화걸기 버튼 누르면 => 해당 번호로 연결
+        binding.dialBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String tellNum = binding.phoneNumTxt.getText().toString();
+                Uri myuri = Uri.parse(String.format("tel:%s",tellNum));
+                Intent myIntent = new Intent(Intent.ACTION_DIAL, myuri);
+                startActivity(myIntent);
+
+            }
+        });
+        binding.closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
