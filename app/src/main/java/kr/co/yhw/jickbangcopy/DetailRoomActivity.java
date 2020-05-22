@@ -1,9 +1,8 @@
 package kr.co.yhw.jickbangcopy;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.os.Bundle;
+
+import androidx.databinding.DataBindingUtil;
 
 import kr.co.yhw.jickbangcopy.databinding.ActivityDetailRoomBinding;
 
