@@ -1,6 +1,8 @@
 package kr.co.yhw.jickbangcopy.datas;
 
-public class Room {
+import java.io.Serializable;
+
+public class Room implements Serializable {
 
     private int price; // 만원단위로 기록 15000 => 1억 5천만원
     private String address; //구 와 동만 기록 (마포구 망원동)

@@ -36,7 +36,11 @@ public class MainActivity extends BaseActivity {
         binding.roomListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Room clickedRoom = rooms.get(position);
+
                 Intent myItent = new Intent(mContext, DetailRoomActivity.class);
+                myItent.putExtra("room",clickedRoom);
                 startActivity(myItent);
             }
         });
