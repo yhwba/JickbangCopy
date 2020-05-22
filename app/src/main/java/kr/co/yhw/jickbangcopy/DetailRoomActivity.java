@@ -51,6 +51,7 @@ public class DetailRoomActivity extends BaseActivity {
     @Override
     public void setValues() {
         mRoom = (Room) getIntent().getSerializableExtra("room");
+//        binding.RoomPhoto.setimage
         binding.priceTxt.setText(mRoom.getFormattedPrice());
         binding.descTxt.setText(mRoom.getDescription());
         binding.addressTxt.setText(mRoom.getAddress());
