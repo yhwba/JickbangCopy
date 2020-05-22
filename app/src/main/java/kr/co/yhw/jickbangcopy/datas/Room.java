@@ -1,13 +1,13 @@
 package kr.co.yhw.jickbangcopy.datas;
 
-public class roomList {
+public class Room {
 
     private int price; // 만원단위로 기록 15000 => 1억 5천만원
     private String address; //구 와 동만 기록 (마포구 망원동)
     private int floor; // 층수 : 양수 , 0층 : 반지하, 음수 : 지하 ?층
     private String description ; // 설명문구
 
-    public roomList(int price, String address, int floor, String description) {
+    public Room(int price, String address, int floor, String description) {
         this.price = price;
         this.address = address;
         this.floor = floor;
