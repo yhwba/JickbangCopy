@@ -7,6 +7,18 @@ public class Room {
     private int floor; // 층수 : 양수 , 0층 : 반지하, 음수 : 지하 ?층
     private String description ; // 설명문구
 
+    public String getFormattedFloor(){
+        if (this.floor > 0){
+            return this.floor+"층";
+        }
+        else if (this.floor<0) {
+            return String.format("지하 %d층",-this.floor);
+        }
+        else {
+            return "반지하";
+        }
+    }
+
     public String getFormattedPrice() {
         if ( price < 10000 ){
             // 8,000만원 이런식으러 컴마만
@@ -14,7 +26,7 @@ public class Room {
         }
         else {
             // 2억8,500 이런식으로 가공 =>28500 /10000
-            return String.format("%d억%,d만원",(this.price/10000),(this.price%10000));
+            return String.format("%d억%,d",(this.price/10000),(this.price%10000));
         }
     }
 
